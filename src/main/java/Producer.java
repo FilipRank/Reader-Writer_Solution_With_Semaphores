@@ -16,7 +16,7 @@ class Producer extends Thread {
         startProducing(milliseconds);
     }
 
-    public void startProducing(int n) {
+    private void startProducing(int n) {
         while (productBuffer.size() < productBuffer.MAX_SIZE) {
             productBuffer.add(new Object());
             try {
